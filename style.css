@@ -1,0 +1,157 @@
+/* import the font family of the project */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Caveat:wght@400..700&family=Changa:wght@200..800&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Heebo:wght@100..900&family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+/* srt the color variables */
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: #00fff7;
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+}
+/* the global styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+body{
+    font-size: 18px;
+    background-color: var(--Very-dark-blue-main-BG);
+}
+/* the container styling */
+.container{
+    width: 350px;
+    height: fit-content;
+    background-color: var(--Very-dark-blue-card-BG);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/* the container image */
+.container .image{
+    width: 300ox;
+    height: 50%;
+    position: relative;
+}
+.container .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+/* the container view icon image */
+.container .image .view{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    display: none;
+    background-color: #00fff77e;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+.container .image .view img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    transition: all 0.3s ease;
+}
+.container .image:hover .view{
+    display: block;
+}
+/* the container text */
+.container .text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+} 
+.container h2{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.container h2:hover{
+    color: var(--Cyan);
+}
+.container p{
+    color: var(--Soft-blue);
+}
+/* the container information  */
+.container .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+    width: 100%;
+}
+.container .info .eth{
+    color: var(--Cyan);
+    width: 50%;
+    display: flex;
+    gap:5px ;
+}
+.container .info .days{
+    color: var(--Soft-blue);
+    width: 50%;
+    display: flex;
+    gap:5px ;
+    justify-content: flex-end;
+}
+/* the container profile */
+.container .profile{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.container .profile img{
+    width: 32px;
+    height: 32px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.container .profile h4{
+    color: var(--Soft-blue);
+    font-weight: normal;
+}
+.container .profile h4 span{
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.container .profile h4 span:hover{
+    color: var(--Cyan);
+}
+/* the link styling */
+.mentor{
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 13px;
+}
+.mentor a{
+    text-decoration: none;
+    color: var(--Cyan);
+}
+@media screen and (max-width:600px){
+    .mentor{
+        font-size: 10px;
+    }
+}
